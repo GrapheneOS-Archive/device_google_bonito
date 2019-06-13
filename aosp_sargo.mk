@@ -33,7 +33,7 @@ PRODUCT_MANUFACTURER := Google
 PRODUCT_BRAND := Android
 PRODUCT_NAME := aosp_sargo
 PRODUCT_DEVICE := sargo
-PRODUCT_MODEL := AOSP on sargo
+PRODUCT_MODEL := Pixel 3a
 
 # Audio XMLs
 PRODUCT_COPY_FILES += \
