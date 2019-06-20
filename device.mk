@@ -129,7 +129,6 @@ MASTER_SIDE_CP_TARGET_LIST := sdm710 # ION specific settings
 # A/B support
 PRODUCT_PACKAGES += \
     otapreopt_script \
-    cppreopts.sh \
     update_engine \
     update_verifier
 
@@ -140,12 +139,14 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PACKAGES += \
     bootctrl.sdm710
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.cp_system_other_odex=1
-
 # Userdata Checkpointing OTA GC
 PRODUCT_PACKAGES += \
     checkpoint_gc
+# Script that copies preloads directory from system_other to data partition
+PRODUCT_COPY_FILES += \
+    device/google/bonito/preloads_copy.sh:system/bin/preloads_copy.sh
+
+AB_OTA_UPDATER := true
 
 AB_OTA_PARTITIONS += \
     boot \
