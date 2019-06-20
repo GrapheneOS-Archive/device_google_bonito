@@ -127,7 +127,6 @@ MASTER_SIDE_CP_TARGET_LIST := sdm710 # ION specific settings
 # A/B support
 PRODUCT_PACKAGES += \
     otapreopt_script \
-    cppreopts.sh \
     update_engine \
     update_verifier
 
@@ -137,9 +136,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 PRODUCT_PACKAGES += \
     bootctrl.sdm710
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.cp_system_other_odex=1
 
 # Script that copies preloads directory from system_other to data partition
 PRODUCT_COPY_FILES += \
