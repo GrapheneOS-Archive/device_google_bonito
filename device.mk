@@ -138,7 +138,6 @@ MASTER_SIDE_CP_TARGET_LIST := sdm710 # ION specific settings
 # A/B support
 PRODUCT_PACKAGES += \
     otapreopt_script \
-    cppreopts.sh \
     update_engine \
     update_verifier
 
@@ -149,9 +148,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PACKAGES += \
     bootctrl.sdm710 \
     bootctrl.sdm710.recovery
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.cp_system_other_odex=1
 
 # Userdata Checkpointing OTA GC
 PRODUCT_PACKAGES += \
