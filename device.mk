@@ -142,9 +142,6 @@ PRODUCT_PACKAGES += \
 # Userdata Checkpointing OTA GC
 PRODUCT_PACKAGES += \
     checkpoint_gc
-# Script that copies preloads directory from system_other to data partition
-PRODUCT_COPY_FILES += \
-    device/google/bonito/preloads_copy.sh:system/bin/preloads_copy.sh
 
 AB_OTA_UPDATER := true
 
