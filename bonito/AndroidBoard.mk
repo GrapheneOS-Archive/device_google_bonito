@@ -33,18 +33,6 @@ ALL_DEFAULT_INSTALLED_MODULES += $(INSTALLED_PERSISTIMAGE_TARGET)
 ALL_MODULES.$(LOCAL_MODULE).INSTALLED += $(INSTALLED_PERSISTIMAGE_TARGET)
 INSTALLED_RADIOIMAGE_TARGET += $(INSTALLED_PERSISTIMAGE_TARGET)
 
-
-INTERNAL_KERNEL_MODULES := \
-	$(foreach file,$(wildcard device/google/bonito-kernel/*.ko \
-	    device/google/bonito-kernel/modules.dep),\
-	    $(file):$(TARGET_OUT_VENDOR)/lib/modules/$(notdir $(file)))
-
-INSTALLED_KERNEL_MODULES := $(call copy-many-files,$(INTERNAL_KERNEL_MODULES))
-
-.PHONY: kernel-modules
-kernel-modules: $(INSTALLED_KERNEL_MODULES)
-	@echo Kernel modules installed
-
 .PHONY: persistimage
 persistimage: $(INSTALLED_PERSISTIMAGE_TARGET)
 
