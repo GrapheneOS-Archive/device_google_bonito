@@ -2,8 +2,6 @@
 on zygote-start
     # zygote is started in common init.rc
     # and now we can continue to initialize /data/
-    # create the directory for preload content.
-    mkdir /data/preloads 0775 system system
 
 on property:sys.boot_completed=1
     # Create pixel-trace.
