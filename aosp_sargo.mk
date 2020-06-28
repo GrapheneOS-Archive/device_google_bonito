@@ -14,6 +14,11 @@
 # limitations under the License.
 #
 
+# PRODUCT_COPY_FILES retains the first dest match, so this must appear
+# before mainline.mk to override device/sample/etc/apns-full-conf.xml.
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/apns-full-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
+
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/mainline.mk)
@@ -40,5 +45,4 @@ PRODUCT_DEVICE := sargo
 PRODUCT_MODEL := Pixel 3a
 
 PRODUCT_COPY_FILES += \
-    device/sample/etc/apns-full-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml \
     $(LOCAL_PATH)/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml
