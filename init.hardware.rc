@@ -822,8 +822,7 @@ service vendor.theme_set /vendor/bin/misc_writer --set-dark-theme
     disabled
     oneshot
 
-# Set dark boot flag when the device is provisioned.
-on property:persist.sys.device_provisioned=1
+on init
     start vendor.theme_set
 
 on init && property:ro.boot.slot_successful=no
