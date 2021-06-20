@@ -66,3 +66,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Add white point compensated coefficient
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.adaptive_white_coefficient=0.0031,0.5535,-87.498,0.0031,0.5535,-87.498,0.0031,0.5535,-87.498
+
+# Set of *_EXPERIENCE features for sargo
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/google_experience.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/google_experience.xml
