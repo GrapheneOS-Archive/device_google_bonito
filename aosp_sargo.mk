@@ -54,7 +54,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += com.android.vndk.current.on_vendor
 
 PRODUCT_MANUFACTURER := Google
-PRODUCT_BRAND := Android
+PRODUCT_BRAND := google
 PRODUCT_NAME := aosp_sargo
 PRODUCT_DEVICE := sargo
 PRODUCT_MODEL := Pixel 3a
