@@ -127,3 +127,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     PresencePolling \
     RcsService
+
+PRODUCT_PACKAGES += \
+    extracted-carrierconfig \
+    extracted-apns

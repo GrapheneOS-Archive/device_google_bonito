@@ -240,3 +240,7 @@ BOARD_PREBUILT_DTBIMAGE_DIR := device/google/bonito-kernel
 BOARD_PERFSETUP_SCRIPT := platform_testing/scripts/perf-setup/b4s4-setup.sh
 
 -include vendor/google_devices/bonito/proprietary/BoardConfigVendor.mk
+
+SOONG_CONFIG_NAMESPACES += carriers-apv
+SOONG_CONFIG_carriers-apv += apv
+SOONG_CONFIG_carriers-apv_apv:= true

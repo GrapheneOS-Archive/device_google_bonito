@@ -28,7 +28,8 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/google/interfaces \
     vendor/google_devices/common/proprietary/confirmatioui_hal \
     vendor/google_nos/host/android \
-    vendor/google_nos/test/system-test-harness
+    vendor/google_nos/test/system-test-harness \
+    vendor/carriersettings-extractor
 
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true
